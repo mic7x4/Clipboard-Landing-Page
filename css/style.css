@@ -2,7 +2,7 @@
     --success: hsl(171, 66%, 44%);
     --primary:hsl(233, 100%, 69%);
 
-    --dark-grayish-blue:hsl(210, 10%, 33%);
+    --dark-grayish-blue:hsl(0, 1%, 42%);
     --grayish-blue:hsl(200, 13%, 86%);
 }
 *{
@@ -15,6 +15,13 @@ body{
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 18px;
     line-height: 1.5;
+}
+p{
+    color: var(--dark-grayish-blue);
+    
+}
+h2,h3,h4,h5 {
+    color: var(--dark-grayish-blue);
 }
 
 header{
@@ -40,22 +47,30 @@ header img{
 .container h2{
     text-align: center;
     padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 3rem;
 }
 .container p{
     text-align: center;
+    font-size: 1.5rem;
+}
+.container h3 {
+    font-size: 2rem;
 }
 .cta{
     margin: 0 auto;
     text-align: center;
 }
 .container button{
-    margin: 2rem 0;
+    margin: 2rem 1rem;
     padding: 15px 30px;
     border-radius: 2rem;
     color: #fff;
     text-align: center;
     border: none;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 button.success{
     background-color: var(--success);
@@ -78,6 +93,7 @@ button.primary {
 .flex {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 .quick-search {
     max-width: 100%;
@@ -90,21 +106,23 @@ button.primary {
     max-width: 50%;
 }
 .quick-search img{
-    width: 60%;
+    width: 40%;
 }
 
 .search p,
 .sync p,
 .history p{
     padding-top: 2rem;
+    font-size: 1.5rem;
 }
 .search h3,
 .sync h3,
 .history h3{
     padding-top: 1rem;
+    font-size: 2rem;
 }
 .access{
-    padding-top: 14rem;
+    padding-top: 4rem;
 }
 .access h2{
     font-size: 32px;
@@ -119,6 +137,8 @@ button.primary {
     padding: 0 20px;
     text-align: center;
     margin-top: 5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 .list {
     margin-top: 5rem;
@@ -155,6 +175,9 @@ button.primary {
 
 .clipboard {
     padding-top: 10rem;
+}
+.clipboard h2{
+    font-size: 1.5rem;
 }
 .clipboard h2, .clipboard p{
     padding-bottom: 2rem;
@@ -200,6 +223,71 @@ footer a:hover{
 
 
 /* Media Querries */
-@media(max-width:900px){
+@media(max-width:1000px){
+    header{    
+    background-image: url('/img/bg-header-mobile.png');
+    }
+    .keep-track p{
+        padding: 0 2rem;
+    }
+    .flex {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .quick-search {
+        width: 100%;
+        padding: 0 4rem;
+        padding-top: 4rem;
+        text-align: center;
+    }
+    .quick-search img{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .logos {
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 4rem;
+    }
+    .logos-container{
+        width: 100%;
+        padding: 0 4rem;
+    }
+    .logos-container img{
+        margin: 0 auto;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+    .footer-container img{
+        margin-bottom: 3rem;
+        margin: 2rem auto;
+    }
+    .list {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 2rem;
+        width: 100%;
+    }
+    .quick-right {
+        padding-top: 4rem;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+    .social {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
 
+    }
+    @media(max-width:400px){
+        .container h2{
+            font-size: 1.6rem;
+        }
+    }
 }
